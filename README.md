@@ -60,7 +60,7 @@ Add this script to your `package.json`
 {
     // ...
     "scripts": {
-        "cavy": "node ./node_modules/cavy-cli/server.js",
+        "cavy": "node ./node_modules/cavy-cli/src/server.js",
     }
     // ...
 }
