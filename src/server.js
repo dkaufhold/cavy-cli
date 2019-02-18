@@ -1,9 +1,9 @@
-const WS = require('ws')
+const WebSocket = require('ws')
 const express = require('express')
 const chalk = require('chalk')
 const app = express()
 const WS_PORT = 3030
-const wss = new WS.Server({ port: WS_PORT })
+const wss = new WebSocket.Server({ port: WS_PORT })
 const argv = require('minimist')(process.argv.slice(2))
 const filter = argv.filter
 let connections = {}
@@ -22,7 +22,7 @@ function printHelp() {
 }
 
 const stdin = process.stdin
-// stdin.setRawMode(true)
+stdin.setRawMode(true)
 stdin.resume()
 stdin.setEncoding('utf8')
 stdin.on('data', (key) => {
@@ -41,8 +41,7 @@ stdin.on('data', (key) => {
   }
 })
 
-wss.on('connection', function connection(client, socket, message) {
-  console.log(message)
+wss.on('connection', function connection(client) {
   const handleKeypress = (key) => {
     if (key.toLowerCase() === 't')
       client.send(JSON.stringify({ status: 'RUNTEST', filter }))
@@ -116,7 +115,7 @@ app.post('/report', (req, res) => {
     const duration = req.body['duration']
 
     results.forEach((result, index) => {
-      const message = `${index + 1}) ${result['message']}`
+      message = `${index + 1}) ${result['message']}`
 
       if (result['passed']) {
         // Log green test result if test passed
