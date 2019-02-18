@@ -8,6 +8,24 @@
 [Cavy](https://github.com/pixielabs/cavy), a cross-platform integration test
 framework for React Native, by [Pixie Labs](https://pixielabs.io).
 
+## About this fork
+
+This fork is an almost complete rewrite of the cavy cli. It's meant to work around
+some limitations of the cavy cli in regards to the project I am currently using
+it in. Maybe some of the ideas outlined in this fork might find it back to the
+original.
+  
+Also the rest of this readme might not match the new implementation.
+
+Note: Installing from NPM means installing the original.
+
+I'm on it :)
+
+## Known incompatibilities
+
+* Expo is required (which is ok if you have a fresh, recent React Native project)
+* Requires [fork of main project](https://github.com/dkaufhold/cavy/)
+
 ## What does it do?
 
 **cavy-cli** builds, simulates, and tests your React Native app from the
@@ -21,6 +39,46 @@ configuration](https://github.com/pixielabs/cavy/blob/master/.circleci/config.ym
 for inspiration.
 
 ## Installation
+
+### post-fork
+
+install locally 
+
+```shell
+$ npm i cavy-cli
+```
+
+or with `yarn`
+
+```shell
+$ yarn add cavy-cli
+```
+
+Add this script to your `package.json`
+
+```json5
+{
+    // ...
+    "scripts": {
+        "cavy": "node ./node_modules/cavy-cli/server.js",
+    }
+    // ...
+}
+```
+
+Run test server"
+
+```shell
+$ npm run cavy
+```
+
+or
+
+```shell
+$ yarn run cavy
+```
+
+### pre-fork
 
 To get started with **cavy-cli**, install it using `npm`:
 
@@ -42,6 +100,7 @@ app:
 ...
 </Tester>
 ```
+
 
 ## Basic usage
 

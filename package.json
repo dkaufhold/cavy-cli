@@ -1,37 +1,19 @@
 {
   "name": "cavy-cli",
   "version": "1.0.0",
-  "description": "A command line interface for Cavy, a React Native integration testing framework",
-  "bin": {
-    "cavy": "./cavy.js"
-  },
-  "main": "cavy.js",
+  "description": "Cavy Test Server",
+  "main": "dist/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pixielabs/cavy-cli.git"
-  },
-  "keywords": [
-    "react",
-    "react native",
-    "ios",
-    "android",
-    "integration tests",
-    "testing",
-    "test",
-    "specs"
-  ],
-  "author": "Pixie Labs",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/pixielabs/cavy-cli/issues"
-  },
-  "homepage": "https://github.com/pixielabs/cavy-cli#readme",
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "chalk": "^2.3.0",
-    "commander": "^2.12.2",
-    "express": "^4.16.2"
+    "chalk": "^2.4.2",
+    "commander": "^2.19.0",
+    "express": "^4.16.4",
+    "minimist": "^1.2.0",
+    "ws": "^6.1.3"
   }
 }

@@ -3,7 +3,7 @@ const program = require('commander');
 const { spawn, execFileSync, execSync } = require('child_process');
 const { existsSync } = require('fs');
 
-const server = require('./server')
+const server = require('./src/server')
 
 // Stop quitting unless we want to
 process.stdin.resume();
