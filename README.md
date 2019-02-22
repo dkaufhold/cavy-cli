@@ -25,6 +25,7 @@ I'm on it :)
 
 * Expo is required (which is ok if you have a fresh, recent React Native project)
 * Requires [fork of main project](https://github.com/dkaufhold/cavy/)
+* The cavy command currently does not work. It runs from a server connection as stated under Installation or Usage
 
 ## What does it do?
 
@@ -39,8 +40,6 @@ configuration](https://github.com/pixielabs/cavy/blob/master/.circleci/config.ym
 for inspiration.
 
 ## Installation
-
-### post-fork
 
 install locally 
 
@@ -78,59 +77,10 @@ or
 $ yarn run cavy
 ```
 
-### pre-fork
-
-To get started with **cavy-cli**, install it using `npm`:
-
-```shell
-$ npm install -g cavy-cli
-```
-
-or `yarn`:
-
-```shell
-$ yarn global add cavy-cli
-```
-
-Set the `sendReport` prop to `true` on your Cavy `<Tester>` component in your
-app:
-
-```jsx
-<Tester specs={...} store={...} sendReport={true}>
-...
-</Tester>
-```
-
 
 ## Basic usage
 
-From within your React Native project, with Cavy already installed and set up
-
-```shell
-# To test on iOS
-$ cavy run-ios
-
-# To test on Android
-$ cavy run-android
-```
-
-**cavy-cli** will use an `index.test.js` entry point if you have one in your
-React Native project. This allows you to set up your tests to only run
-when your app is built by **cavy-cli**.
- 
-## TODO
-
-- Make this the default way of running Cavy; only run tests if **cavy-cli** is
-  waiting for test results.
-- Output to a report file so continuous integration tools can give a richer
-  report of what tests passed/failed.
-- Output the test results in progress, not just when they are all finished.
-- Handle when Cavy never runs; time out if the app doesn't boot after a certain
-  amount of time.
-- Get a working example of an Android build in CI. We couldn't get an Android
-  emulator running properly in Circle CI. If you have an example of
-  **cavy-cli** working in CI for Android builds, please get in touch!
-- Pass through arguments to react-native command.
+WIP
 
 ## Contributing
 
