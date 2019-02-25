@@ -44,13 +44,11 @@ for inspiration.
 install locally 
 
 ```shell
-$ npm i cavy-cli
-```
+$ yarn add git+https://git@github.com/dkaufhold/cavy-forked-cli --dev
 
-or with `yarn`
+# or `npm`:
 
-```shell
-$ yarn add cavy-cli
+$ npm i --save-dev git+https://git@github.com/dkaufhold/cavy-forked-cli
 ```
 
 Add this script to your `package.json`
