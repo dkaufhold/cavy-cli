@@ -1,12 +1,10 @@
-# cavy-cli
-
-[![npm version](https://badge.fury.io/js/cavy-cli.svg)](https://badge.fury.io/js/cavy-cli)
-
-![Cavy logo](https://cloud.githubusercontent.com/assets/126989/22546798/6cf18938-e936-11e6-933f-da756b9ee7b8.png)
+# cavy-forked-cli
 
 **cavy-cli** is a command line interface for
 [Cavy](https://github.com/pixielabs/cavy), a cross-platform integration test
 framework for React Native, by [Pixie Labs](https://pixielabs.io).
+
+This cavy(forked)-cli is a heavily modified fork of the original.
 
 ## About this fork
 
@@ -24,7 +22,7 @@ I'm on it :)
 ## Known incompatibilities
 
 * Expo is required (which is ok if you have a fresh, recent React Native project)
-* Requires [fork of main project](https://github.com/dkaufhold/cavy/)
+* Requires [fork of main project](https://github.com/dkaufhold/cavy-forked/)
 * The cavy command currently does not work. It runs from a server connection as stated under Installation or Usage
 
 ## What does it do?
@@ -33,11 +31,6 @@ I'm on it :)
 command line. When the tests finish the command outputs the results and quits
 with the relevant exit code (0 for success, 1 for failure) which can be used by
 continuous integration scripts to determine if the test suite passed or not.
-
-**cavy-cli is in an early stage of development**. But we are using it to test
-Cavy itself! Check out [our sample app Circle CI
-configuration](https://github.com/pixielabs/cavy/blob/master/.circleci/config.yml) 
-for inspiration.
 
 ## Installation
 
