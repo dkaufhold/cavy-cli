@@ -80,7 +80,7 @@ $ yarn run cavy
 
 ## Basic usage
 
-WIP
+WIP: see [cavy(forked)](https://github.com/dkaufhold/cavy-forked/)
 
 ## Contributing
 
