@@ -24,6 +24,7 @@ I'm on it :)
 * Expo is required (which is ok if you have a fresh, recent React Native project)
 * Requires [fork of main project](https://github.com/dkaufhold/cavy-forked/)
 * The cavy command currently does not work. It runs from a server connection as stated under Installation or Usage
+* The test server doesn't detect properly when an Android device disconnects during refreshing. It does only re-register when the app comes back online
 
 ## What does it do?
 
@@ -68,6 +69,16 @@ or
 $ yarn run cavy
 ```
 
+you can pass an option `--filter` to apply a string filter to the spec names.
+
+I.e. by running `yarn run cavy --filter LoginSpec` you can re-run only running
+the test spec registered as `LoginSpec`.  
+
+You can also supply a comma separated list of filters, which are each applied.  
+Running `yarn run cavy --filter LoginSpec,FeatureSpec,LogoutSpec` will run the
+login spec, a spec about a feature you want to test and then the logout spec.  
+The order of filters given does not change the order of specs. It will still run
+in the order that they were registered in.
 
 ## Basic usage
 
